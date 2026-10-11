@@ -1,0 +1,145 @@
+% ==================================================================================== %
+% Example assignment template for physics/astrophysics/astronomy
+% MIT (c) 2026 Taotao Yang
+% ==================================================================================== %
+\documentclass[11pt,a4paper]{article}
+\input{preamble}
+% ==================================================================================== %
+\fancyhf{}
+\fancyhead[L]{Very Difficult Course}
+\fancyhead[C]{}
+\fancyhead[R]{Assignment 42}
+\fancyfoot[C]{\thepage}
+% ==================================================================================== %
+\begin{document}
+    \thispagestyle{empty}
+    \begin{center}
+        {\bf \Large The assignment: this looks like a title}\\
+        \vspace{-0.2cm}
+    \end{center}
+    \begin{flushleft}
+        \makebox[\linewidth]{\rule{\textwidth}{0.8pt}}
+        \vspace{-0.2cm}\\
+        \begin{tabular}{p{1.6cm} p{7cm} p{3cm}}
+            {\bf Topic:} & Very Difficult Course (VDC) & \\
+            {\bf Due:} & Jan. 01, 1970 by 23:59 hours & \\
+            {\bf Author:} & James Holden &
+            \href{mailto:holden@roci.edu}{holden@roci.edu}\\
+            {\bf ~} & Naomi Nagata &
+            \href{mailto:nagata@roci.edu}{nagata@roci.edu}\\
+            {\bf ~} & Amos Burton &
+            \href{mailto:burton@roci.edu}{burton@roci.edu}\\
+            {\bf ~} & Alex Kamal &
+            \href{mailto:kamal@roci.edu}{kamal@roci.edu}\\
+            {\bf Lecturer:} & Dr. Praxideke Meng &
+            \href{mailto:pmeng@ganymede.org}{pmeng@ganymede.org}\\
+            {\bf ~} & Chrisjen Avasarala &
+            \href{mailto:avasarala@unn.gov}{avasarala@unn.gov}\\
+            {\bf Dated:} & Jan. 01, 2000 &
+        \end{tabular}
+        \vspace{0.2cm}\\
+        \makebox[\linewidth]{\rule{\textwidth}{0.8pt}}
+    \end{flushleft} 
+
+    % \vspace{-1em}
+% ==================================================================================== %
+    \tableofcontents
+    \clearpage
+    \setcounter{page}{1} 
+% ==================================================================================== %
+\section{A section}
+\label{sec:a_section}
+    This is a section.
+    
+    \subsection{A subsection}
+    \label{subsec:a_subsection}
+    This is a subsection
+% ==================================================================================== %
+\section{Math}
+\label{sec:math}
+    Write numbered equations with labelling quickly with:
+    \begin{lstlisting}[language=tex]
+    \[ 
+        E = m c^2
+        \label{eq:einstein}
+    \]
+    \end{lstlisting}
+    This becomes:
+    \[ 
+        E = m c^2
+        \label{eq:einstein}
+    \]
+    Inline math is simply \verb|$ a =1 $|, rendered as $a=1$. 
+    And we can refer to the labeled entries via \verb|\cref{}|. Let us look at \cref{eq:einstein}.
+% ==================================================================================== %
+\section{Figures and Tables}
+\label{sec:figs_and_tabs}
+
+    We include an image placed here:
+    \begin{lstlisting}[language=tex]
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=0.25\linewidth]{fig/test.png}
+        \caption[A short caption]{A long caption with more information}
+        \label{fig:an_img}
+    \end{figure}
+    \end{lstlisting}
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=0.25\linewidth]{fig/test.png}
+        \caption[A short caption]{A long caption with more information}
+        \label{fig:an_img}
+    \end{figure}
+
+    How about a table? 
+    \begin{lstlisting}[language=tex]
+    begin{table}[h]
+        \centering
+        \begin{tabular}{l c}
+            \hline
+            Parameter & Requirement \\
+            \hline
+            entry & 1\\
+            \hline
+            another entry & 2\\
+            \hline
+        \end{tabular}
+        \caption[A short caption]{A long caption}
+        \label{tab:a_tab}
+    \end{table}
+    \end{lstlisting}
+    
+    \begin{table}[h]
+        \centering
+        \begin{tabular}{l c}
+            \hline
+            Parameter & Requirement \\
+            \hline
+            entry & 1\\
+            \hline
+            another entry & 2\\
+            \hline
+        \end{tabular}
+        \caption[A short caption]{A long caption}
+        \label{tab:a_tab}
+    \end{table}
+    
+% ==================================================================================== %
+\appendix
+\section{Code Listing}
+    \label{app: code}
+    A code file can also be listed.
+    \begin{lstlisting}[language=tex]
+    \lstinputlisting[
+        language=Python, 
+        caption={code/example.py}, 
+        label={list:example.py}]
+    {code/example.py}
+    \end{lstlisting}
+    \lstinputlisting[
+        language=Python, 
+        caption={code/example.py}, 
+        label={list:example.py}]
+    {code/example.py}
+
+\end{document}

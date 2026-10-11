@@ -1,0 +1,78 @@
+% ==================================================================================== %
+% An assignment template for physics/astronomy/astrophysics
+% MIT (c) 2026 Taotao Yang
+% ==================================================================================== %
+\usepackage[margin=1in]{geometry}
+\usepackage[shortlabels]{enumitem}
+\usepackage[nointegrals]{wasysym}
+\usepackage[mathlines]{lineno}
+\usepackage[bottom]{footmisc}
+\usepackage[utf8]{inputenc}
+\usepackage{mathtools}
+\usepackage{listings}
+\usepackage{titlesec}
+\usepackage{pgfplots}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{dcolumn}
+\usepackage{wrapfig}
+\usepackage{physics}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{natbib}
+\usepackage{xcolor}
+\usepackage{xfrac}
+\usepackage{float}
+\usepackage{calc}
+\usepackage{bm}
+% ==================================================================================== %
+\definecolor{nord-bg}{HTML}{FFFFFF}
+\definecolor{nord-fg}{HTML}{2E3440}
+\definecolor{nord-comment}{HTML}{5E81AC}
+\definecolor{nord-keyword}{HTML}{BF616A}
+\definecolor{nord-string}{HTML}{A3BE8C}
+\definecolor{nord-number}{HTML}{B48EAD}
+\definecolor{nord-operator}{HTML}{D08770}
+% ==================================================================================== %
+\usepackage[colorlinks=true,urlcolor=nord-fg,linkcolor=nord-fg,citecolor=nord-fg]{hyperref}
+\usepackage{cleveref}
+% ==================================================================================== %
+\def\[{\begin{equation}}
+\def\]{\end{equation}}
+\pagestyle{fancy}
+\pgfplotsset{compat=1.18}
+\setlength{\headheight}{14.5pt}
+\renewcommand{\headrulewidth}{0.3pt}
+% \newcommand{\sectionbreak}{\clearpage}
+\theoremstyle{definition}
+\newtheorem{problem}{Problem}
+\renewcommand*{\proofname}{Solution}
+% ==================================================================================== %
+\titleformat{\section}{\Large\bfseries}{\thesection}{1em}{}[{\titlerule[0.0pt]}]
+% ==================================================================================== %
+\lstdefinestyle{nord_light}{
+  backgroundcolor=\color{nord-bg},
+  basicstyle=\color{nord-fg}\footnotesize\ttfamily,
+  commentstyle=\color{nord-comment},
+  keywordstyle=\color{nord-keyword}\bfseries,
+  stringstyle=\color{nord-string},
+  numberstyle=\color{nord-number},
+  otherkeywords={self,cls,@classmethod,@property},
+  keywordstyle={[2]\color{nord-operator}},
+  frame=leftline,
+  showstringspaces=false,
+  breaklines=true,
+  tabsize=4,
+  extendedchars=true,
+  numbers=left,
+  numberstyle=\tiny\color{nord-fg},
+  stepnumber=1,
+  numbersep=10pt,
+}
+\lstset{style=nord_light}
+% ==================================================================================== %
+\bibliographystyle{apsrev}
+\setcitestyle{numbers,square}
+% ==================================================================================== %
